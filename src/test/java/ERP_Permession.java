@@ -10,7 +10,9 @@ public class ERP_Permession {
     public static void main(String[] args) {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
-        String url = "https://smarterp.isfpegypt.com/Core-web2/";
+        System.out.println("Enter the site url");
+        Scanner input = new Scanner(System.in);
+        String url = input.next();
         driver.get(url);
         driver.manage().window().maximize();
         WebElement username = driver.findElement(By.id("j_username"));
