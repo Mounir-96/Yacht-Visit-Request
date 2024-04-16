@@ -19,7 +19,10 @@ public class Reports {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        driver.get("http://10.9.100.95:8080/EMDB-web/");
+        System.out.println("Enter the site url");
+        Scanner input = new Scanner(System.in);
+        String url = input.next();
+        driver.get(url);
         driver.findElement(By.id("LoginForm:j_username")).sendKeys("emdbAdmin");
         driver.findElement(By.id("LoginForm:j_password")).sendKeys("Emdb2023");
         driver.findElement(By.id("LoginForm:my2Btn")).click();
